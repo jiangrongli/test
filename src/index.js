@@ -1,0 +1,1 @@
+document.getElementById('app').innerHTML = "初次 Webpack works"

@@ -1,0 +1,24 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "react 全家桶",
+  "main": "index.js",
+  "scripts": {
+    "test": "app.js",
+    "start": "webpack --config webpack.dev.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiangrongli/test.git"
+  },
+  "author": "czq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiangrongli/test/issues"
+  },
+  "homepage": "https://github.com/jiangrongli/test#readme",
+  "devDependencies": {
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  }
+}
