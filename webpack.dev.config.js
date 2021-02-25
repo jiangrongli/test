@@ -9,5 +9,13 @@ module.exports = {
     output: {
         path: path.join(__dirname, './dist'),
         filename: 'bundle.js'
+    },
+    mode: 'development', // 设置mode
+    module: {
+        rules: [{
+            test: /\.js$/,
+            use: ['babel-loader?cacheDirectory=true'],
+            include: path.join(__dirname, 'src')
+        }]
     }
 };
