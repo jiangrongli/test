@@ -29,10 +29,12 @@ module.exports = {
         host: '0.0.0.0',
         hot: true,  //热更新设置这里
     },
-    // alias: {
+    resolve: {
+        alias: {
+            actions: path.join(__dirname, './src/redux/actions'),
+            reducers: path.join(__dirname, './src/redux/reducers'),
 
-    //     actions: path.join(__dirname, 'src/redux/actions'),
-    //     reducers: path.join(__dirname, 'src/redux/reducers'),
-    //     redux: path.join(__dirname, 'src/redux')
-    // }
+        }
+	}
+
 };
