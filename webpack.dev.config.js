@@ -12,8 +12,8 @@ module.exports = {
     /*输出到dist文件夹，输出文件名字为bundle.js*/
     output: {
         path: path.join(__dirname, './dist'),
-        filename: '[name].[hash].js',
-        chunkFilename: '[name].[chunkhash].js'
+        filename: 'bundle.js',
+        chunkFilename: '[name].js'
     },
     mode: 'development', // 设置mode
     module: {
@@ -52,5 +52,5 @@ module.exports = {
 
         }
     },
-    devtool: 'inline-source-map'
+    devtool: 'inline-source-map',
 };
