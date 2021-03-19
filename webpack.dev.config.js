@@ -19,6 +19,17 @@ module.exports = {
     },
         // 'react-hot-loader/patch',
         // path.join(__dirname, 'src/index.js')
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    name: "commons",
+                    chunks: "initial",
+                    minChunks: 2
+                }
+            }
+        }
+    },
 
 
     // ],
@@ -74,8 +85,19 @@ module.exports = {
         }),
         
         /*plugins*/
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor'
-        })
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'vendor'
+        // })
     ],
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    name: "commons",
+                    chunks: "initial",
+                    minChunks: 2
+                }
+            }
+        }
+    },
 };

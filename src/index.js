@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 import store from './redux/store';
 
 import getRouter from './router/router';
+import 'antd/dist/antd.css';
 
 /*初始化*/
 renderWithHotReload(getRouter());

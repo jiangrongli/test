@@ -10,9 +10,19 @@ module.exports = {
         app: [
             path.join(__dirname, 'src/index.js')
         ],
-        vendor: ['react', 'react-router-dom', 'redux', 'react-dom', 'react-redux']
+        // vendor: ['react', 'react-router-dom', 'redux', 'react-dom', 'react-redux']
     },
-
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    name: "commons",
+                    chunks: "initial",
+                    minChunks: 2
+                }
+            }
+        }
+    },
     output: {
         path: path.join(__dirname, './dist'),
         filename: '[name].[hash].js',
@@ -63,8 +73,19 @@ module.exports = {
             filename: 'index.html',
             template: path.join(__dirname, 'src/index.html')
         }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor'
-        })
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'vendor'
+        // })
     ],
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    name: "commons",
+                    chunks: "initial",
+                    minChunks: 2
+                }
+            }
+        }
+    },
 };
